@@ -27,11 +27,15 @@ video {
   padding: 1em;
 }
 
-#line { 
-  width: 80%;
+#lines li { 
+ overflow:auto;
+}
+
+input#line { 
+  width: 85%;
   font-size: large;
   font-family: sans-serif;
-  margin: 0 1em;
+  float:right;
   padding: 4px;
 }
 
@@ -80,6 +84,7 @@ a.start, a.stop {
   -moz-border-radius: 4px; 
   background: #cec3cd;
   padding: 2px;
+  margin-right: 2px;
   color: #fff;
 }
 

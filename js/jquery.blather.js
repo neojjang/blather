@@ -13,10 +13,25 @@ $(function(){
   $video.bind('timeupdate', function(){
     var rounded = Math.floor(video.currentTime);
     if (rounded % 1 == 0 ){
-      $('#currentTime').text(rounded);
+      $('#currentTime').text(timestamp(Math.floor(video.currentTime)));
     }
   })
+
+  function save(){
+    localStorage['script'] = $('#lines').html();
+  }
   
+
+  $('input#line').keydown(function(e){
+    if($(this).val().length > 0 && e.which == 13){
+       $(this).parent().after($('<li/>',{
+           'text': $(this).val()   
+         })
+       )
+       $(this).val('').focus();
+       save();
+   }
+  })
 
   $(document).keydown(function(e){
     if (e.which==27){

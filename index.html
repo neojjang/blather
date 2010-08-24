@@ -4,9 +4,12 @@
   <title>blather - transcription tool</title>
   <meta charset="UTF-8">
   <script src="js/jquery.js"></script>
+  <script src="js/utils.js"></script>
   <script src="js/jquery.blather.js"></script>
   <link href="css/style.css" rel="stylesheet" />
 
+<script>
+</script>
 </head>
 <body>
 
@@ -28,12 +31,11 @@
     <strong>speaker:</strong>
     <button title="add a speaker" id=add_speaker>+</button>
     <label for=speaker_0><input type=radio name=speakers id=speaker_0 value=speaker_0> 0</label>
-    <label for=speaker_1><input type=radio name=speakers id=speaker_1 value=speaker_1> 1</label>
   </p>
   <ul id=lines>
     <li>
-      <a href="#t10" class="start">0:10</a>
-      <a href="#t12" id="currentTime" class="stop">0:12</a>
+      <a href="#t01" class="start">0:00</a>
+      <a href="#t00" id="currentTime" class="stop">0:01</a>
       <input id=line type=text tabindex=1 autofocus>
     </li>
     <li>
@@ -41,7 +43,6 @@
       <a href="" class="line_text">line</a>
       <a href="#t12" class="stop">0:12</a>
     </li>
-    <li>line</li>
   </ul>
 </div>
 
