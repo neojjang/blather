@@ -1,0 +1,92 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  overflow:auto;
+}
+
+#player { 
+  float:left;
+  margin: 4px;
+  padding: 4px;
+  background: #333;
+  color: #ccc;
+  overflow:auto;
+  -moz-border-radius: 4px;
+}
+
+video {
+}
+
+#transcript {
+  width: 50%;
+  float:right;
+  padding: 1em;
+}
+
+#line { 
+  width: 80%;
+  font-size: large;
+  font-family: sans-serif;
+  margin: 0 1em;
+  padding: 4px;
+}
+
+#lines {
+  overflow:auto;
+  margin: 2px 0;
+  border-top: 1px solid #aac;
+  padding: 0px;
+}
+
+#lines li {
+  list-style-type:none;
+  border-bottom: 1px solid #aac;
+  padding: 4px;
+}
+
+.line_text {
+  padding: 2px 1em;
+  text-decoration: none;
+  margin: 2px 1em;
+  font-size: large;
+}
+  
+
+#speakers {
+  margin: 2px;
+}
+
+label {
+  cursor: pointer;
+  -moz-border-radius: 4px; 
+  background: #fde;
+  font-size: small;
+  padding: 2px;
+  margin: 2px;
+}
+
+nav { 
+  float:right;
+  padding: 2px;
+}
+
+a.start, a.stop {
+  font-size: small;
+  text-decoration: none;
+  -moz-border-radius: 4px; 
+  background: #cec3cd;
+  padding: 2px;
+  color: #fff;
+}
+
+a.start {
+  float: left;
+}
+
+a.stop {
+  float: left;
+}
