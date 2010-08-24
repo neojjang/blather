@@ -1,0 +1,6 @@
+blather - an html5 audio/video transcription tool
+=================================================
+
+trying to make a tool to transcribe speech, and trying to do so as simply as possible.
+
+ideally, this thing won't rely on a database at all.
