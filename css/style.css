@@ -16,6 +16,12 @@ body {
   color: #ccc;
   overflow:auto;
   -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+audio {
+  margin: 4px; 
+  padding: 2px; 
 }
 
 video {
@@ -27,9 +33,6 @@ video {
   padding: 1em;
 }
 
-#lines li { 
- overflow:auto;
-}
 
 input#line { 
   width: 85%;
@@ -44,6 +47,7 @@ input#line {
   margin: 2px 0;
   border-top: 1px solid #aac;
   padding: 0px;
+  width: 100%;
 }
 
 #lines li {
@@ -67,6 +71,7 @@ input#line {
 label {
   cursor: pointer;
   -moz-border-radius: 4px; 
+  -webkit-border-radius: 4px; 
   background: #fde;
   font-size: small;
   padding: 2px;
@@ -78,20 +83,25 @@ nav {
   padding: 2px;
 }
 
-a.start, a.stop {
-  font-size: small;
-  text-decoration: none;
-  -moz-border-radius: 4px; 
+span#start, span#stop {
   background: #cec3cd;
   padding: 2px;
   margin-right: 2px;
+  -moz-border-radius: 4px; 
+  -webkit-border-radius: 4px; 
+  font-size: small;
   color: #fff;
 }
 
-a.start {
+span#start a, span#stop a {
+  text-decoration: none;
+  color: #666;
+}
+
+span.start {
   float: left;
 }
 
-a.stop {
+span.stop {
   float: left;
 }

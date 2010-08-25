@@ -6,25 +6,27 @@
 
 $(function(){
 
-  var $video = $('video:first');
+  var $media = $('video:first, audio:first');
   var $line = $('input[type=text]:first');
-  var video = $video.get(0);
+  var media = $media.get(0);
 
-  $video.bind('timeupdate', function(){
-    var rounded = Math.floor(video.currentTime);
+  $media.bind('timeupdate', function(){
+    var rounded = Math.floor(media.currentTime);
     if (rounded % 1 == 0 ){
-      $('#currentTime').text(timestamp(Math.floor(video.currentTime)));
+      $('#currentTime').text(timestamp(Math.floor(media.currentTime)));
     }
   })
 
   function save(){
-    localStorage['script'] = $('#lines').html();
+    var name = $('audio source')[0].src.split('/').pop();
+    localStorage[name] = $('#lines').html();
   }
   
 
   $('input#line').keydown(function(e){
-    if($(this).val().length > 0 && e.which == 13){
-       $(this).parent().after($('<li/>',{
+    var line = $(this).val();
+    if(e.which == 13 && line.length > 0){
+       $('#lines').prepend($('<li/>',{
            'text': $(this).val()   
          })
        )
@@ -35,10 +37,10 @@ $(function(){
 
   $(document).keydown(function(e){
     if (e.which==27){
-      if (video.paused){
-        video.play();
+      if (media.paused){
+        media.play();
       } else {
-        video.pause();
+        media.pause();
         $line.focus();
       }
     }

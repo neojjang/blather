@@ -6,9 +6,17 @@
   <script src="js/jquery.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/jquery.blather.js"></script>
+  <script src="js/oswalt-table.js"></script>
+  <script src="js/jquery.transliterate.js"></script>
   <link href="css/style.css" rel="stylesheet" />
 
 <script>
+$(function(){
+  $('#line').transliterate({
+    sourceInputClass: 'plaintext',
+    table: oswalt
+  })
+})
 </script>
 </head>
 <body>
@@ -16,9 +24,15 @@
 <div id=content>
 
 <div id=player>
+  <audio autobuffer controls>
+    <source src="mattole_johnny_jack_animals.wav" >
+    <source src="mattole_johnny_jack_animals.mp3" >
+  </audio>
+<!--
   <video controls>
     <source src="video.ogg" type='video/ogg; codecs="theora,vorbis"'>
   </video>
+-->
 </div>
 
 <nav>
@@ -30,13 +44,26 @@
   <p id=speakers>
     <strong>speaker:</strong>
     <button title="add a speaker" id=add_speaker>+</button>
-    <label for=speaker_0><input type=radio name=speakers id=speaker_0 value=speaker_0> 0</label>
+    <label for=speaker_0><input type=radio name=speakers id=speaker_0 value=speaker_0>0</label>
+  </p>
+
+  <p id=edit>
+      <input id=line type=text tabindex=1 autofocus>
+  </p>
+  <p id=controls>
+      <span id="start">
+        <a href="#" >◀</a>&nbsp;
+        <a href="#t01" class="">00:00</a>&nbsp;
+        <a href="#" >▶</a>
+      </span>
+      <br /><span id="stop">
+        <a href="#" >◀</a>&nbsp;
+        <a href="#t00" id="currentTime" class="stop">00:01</a>&nbsp;
+        <a href="#" >▶</a>
+      </span>
   </p>
   <ul id=lines>
     <li>
-      <a href="#t01" class="start">0:00</a>
-      <a href="#t00" id="currentTime" class="stop">0:01</a>
-      <input id=line type=text tabindex=1 autofocus>
     </li>
     <li>
       <a href="#t10" class="start">0:10</a>

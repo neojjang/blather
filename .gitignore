@@ -1,2 +1,5 @@
 *.ogg
 *.flv
+*.wav
+*.mp3
+*swp*
