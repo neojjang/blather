@@ -9,28 +9,31 @@ body {
 }
 
 #player { 
-  float:left;
-  margin: 4px;
   padding: 4px;
+/*
+  margin: 4px;
   background: #333;
   color: #ccc;
   overflow:auto;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+*/
+  width: 90%;
+  overflow:auto;
 }
 
-audio {
-  margin: 4px; 
-  padding: 2px; 
+#player audio {
+  width: 80%
 }
 
 video {
 }
 
 #transcript {
-  width: 50%;
-  float:right;
+  width: 90%;
   padding: 1em;
+  clear:both;
+  overflow:auto;
 }
 
 
@@ -38,9 +41,9 @@ input#line {
   width: 85%;
   font-size: large;
   font-family: sans-serif;
-  float:right;
   padding: 4px;
 }
+
 
 #lines {
   overflow:auto;
