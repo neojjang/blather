@@ -36,7 +36,7 @@ $(function(){
   })
 
   $(document).keydown(function(e){
-    if (e.which==27){
+    if (e.which==Key.ESC){
       if (media.paused){
         media.play();
       } else {
