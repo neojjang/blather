@@ -30,19 +30,32 @@ $(function(){
            'text': $(this).val()   
          })
        )
-       $(this).val('').focus();
+       $(this).val('');
        save();
    }
   })
 
-  $(document).keydown(function(e){
-    if (e.which==Key.ESC){
+  function togglePlay(){
       if (media.paused){
         media.play();
       } else {
         media.pause();
-        $line.focus();
       }
+  }
+
+  $(document).keydown(function(e){
+    switch(e.which){
+      case Key.LEFT:
+        media.currentTime = media.currentTime - 2;
+        media.play();
+        break;
+      case Key.RIGHT:
+        media.currentTime = media.currentTime + 2;
+        media.play();
+        break;
+      case Key.ESC: 
+        togglePlay();
+        break;
     }
   })
  

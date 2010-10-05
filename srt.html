@@ -2,16 +2,20 @@
 <html>
 <head>
   <title></title>
-  <script src="jquery.js"></script>
-  <meta charset="UTF-8">
-<link href="style.css" rel="stylesheet" />
-<style type="text/css">
+  <script src=js/jquery.js></script>
+  <script src=js/jquery.srtvert.js></script>
+  <meta charset=UTF-8>
+<link href=style.css rel=stylesheet />
+<style type=text/css>
 
 </style>
 <script>
 $(function(){
- 
-  $('textarea:first').srtvert();
+  $('textarea:first').load('twinpeaks.srt', function(){ 
+    $('textarea:first').srtvert();
+
+  });
+
 })
 </script>
 </head>
